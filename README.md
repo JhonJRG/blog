@@ -6,7 +6,7 @@
 --------------
 用户访问某一个网站时首先需要的就是在浏览器输入对应的网址，这里涉及到一些概念：
 
-**（1）URL（Uniform / Universal Resource Locator，常缩写为URL）**
+**（1）[URL](http://baike.baidu.com/item/url)（Uniform / Universal Resource Locator，常缩写为URL）**
 定义：统一资源定位符，俗称为网页地址（网址），如同在网络上的门牌，用于定义互联网上的资源，这个资源可能是一个图片，可能是一个文件，通过URL才可以找到。
 
 **（2）对应的协议：http https ftp file**
