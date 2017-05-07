@@ -22,13 +22,15 @@
     另外，有时我们打开一个网站引入一个类似src="//code/"没有前面的［http:]的路径文件，这个表示当前文件URL的协议和当前页面保持一致。
  
 2.域名解析
-----------
+----------  
 
-     概念解释：对于http://jirengu.com，浏览器实际是不知道jirengu.com到底是什么东西，需要查找jirengu.com网站所在的服务器IP地址，才能找到目标。
+     概念解释：对于http://jirengu.com，浏览器实际是不知道jirengu.com到底是什么东西，需要查找jirengu.com网站所在的服务器IP地址，  
+     才能找到目标。
   
 **（1）[域名](http://baike.baidu.com/item/%E5%9F%9F%E5%90%8D) 是什么？**
 
-       对于http://jirengu.com:8080/blog，jirengu.com就是域名。http，是协议；8080，是服务器上的网络端口号；blog，是页面路径。
+       对于http://jirengu.com:8080/blog，jirengu.com就是域名。http，是协议；8080，是服务器上的网络端口号；  
+       blog，是页面路径。
   
 **（2）为什么要发明域名，不用IP？**
 
