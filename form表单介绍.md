@@ -193,13 +193,13 @@
     
    2.HTML元素Input type='radio'分组，我们知道radio button控件在同一个分组类，check操作是mutex的，同一时间只能选中一个radio，这个分组就是根据相同的Name属性来实现的。
 
-   3.建立页面中的锚点，我们知道<a href="URL">link</a>是获得一个页面超级链接，如果不用href属性，而改用Name，如：<a name="PageBottom"></a>，我们就获得了一个页面锚点。
+   3.建立页面中的锚点，我们知道````<a href="URL">link</a>````是获得一个页面超级链接，如果不用href属性，而改用Name，如：````<a name="PageBottom"></a>````，我们就获得了一个页面锚点。
 
    4.作为对象的Identity，如Applet、Object、Embed等元素。比如在Applet对象实例中，我们将使用其Name来引用该对象。
 
    5.在IMG元素和MAP元素之间关联的时候，如果要定义IMG的热点区域，需要使用其属性usemap，使usemap="#name"(被关联的MAP元素的Name)。
 
-   6.某些特定元素的属性，如attribute，meta和param。例如为Object定义参数<PARAM NAME = "appletParameter" VALUE = "value">或Meta中<META NAME = "Author" CONTENT = "Dave Raggett">。
+   6.某些特定元素的属性，如attribute，meta和param。例如为Object定义参数````<PARAM NAME = "appletParameter" VALUE = "value">````或Meta中````<META NAME = "Author" CONTENT = "Dave Raggett">````。
     
 ## 四.radio 如何 分组?
 
