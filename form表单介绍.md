@@ -4,9 +4,9 @@
 
 ## 一.form表单有什么作用？有哪些常用的input 标签，分别有什么作用？
 
- - 表单在网页中主要负责数据采集功能。
+- 表单在网页中主要负责数据采集功能。
  
- - 一个表单有三个基本组成部分：
+- 一个表单有三个基本组成部分：
  
  **表单标签**：这里面包含了处理表单数据所用CGI程序的URL以及数据提交到服务器的方法。
    
@@ -16,162 +16,162 @@
 
 - 常用的input标签有哪些？
  
- 1.**文本框**是一种让访问者自己输入内容的表单对象，通常被用来填写单个字或者简短的回答，如姓名、地址等。
+  1.**文本框**是一种让访问者自己输入内容的表单对象，通常被用来填写单个字或者简短的回答，如姓名、地址等。
  
- 代码格式：````<input type="text" name="..." size="..." maxlength="..." value="...">````
+  代码格式：````<input type="text" name="..." size="..." maxlength="..." value="...">````
  
- 属性解释：
+  属性解释：
  
- type="text"定义单行文本输入框；
+  type="text"定义单行文本输入框；
     
- name属性定义文本框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
+  name属性定义文本框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
     
- size属性定义文本框的宽度，单位是单个字符宽度；
+  size属性定义文本框的宽度，单位是单个字符宽度；
     
- maxlength属性定义最多输入的字符数。
+  maxlength属性定义最多输入的字符数。
     
- value属性定义文本框的初始值
+  value属性定义文本框的初始值
     
- 例1代码：````<input type="text" name="example1" size="20" maxlength="15" />````
+  例1代码：````<input type="text" name="example1" size="20" maxlength="15" />````
     
- 2.**多行文本框**也是一种让访问者自己输入内容的表单对象，只不过能让访问者填写较长的内容。
+  2.**多行文本框**也是一种让访问者自己输入内容的表单对象，只不过能让访问者填写较长的内容。
  
- 代码格式：````<TEXTAREA name="..." cols="..." rows="..." wrap="VIRTUAL"></TEXTAREA>````
+  代码格式：````<TEXTAREA name="..." cols="..." rows="..." wrap="VIRTUAL"></TEXTAREA>````
 
- 属性解释：
+  属性解释：
 
- name属性定义多行文本框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
+  name属性定义多行文本框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
 
- cols属性定义多行文本框的宽度，单位是单个字符宽度；rows属性定义多行文本框的高度，单位是单个字符宽度；
+  cols属性定义多行文本框的宽度，单位是单个字符宽度；rows属性定义多行文本框的高度，单位是单个字符宽度；
 
- wrap属性定义输入内容大于文本域时显示的方式，可选值如下：
+  wrap属性定义输入内容大于文本域时显示的方式，可选值如下：
  
- 默认值是文本自动换行；当输入内容超过文本域的右边界时会自动转到下一行，而数据在被提交处理时自动换行的地方不会有换行符出现； Off，用来避免文本换行，当输入的内容超过文本域右边界时，文本将向左滚动，必须用Return才能将插入点移到下一行； Virtual，允许文本自动换行。 Physical，让文本换行，当数据被提交处理时换行符也将被一起提交处理。
+  默认值是文本自动换行；当输入内容超过文本域的右边界时会自动转到下一行，而数据在被提交处理时自动换行的地方不会有换行符出现； Off，用来避免文本换行，当输入的内容超过文本域右边界时，文本将向左滚动，必须用Return才能将插入点移到下一行； Virtual，允许文本自动换行。 Physical，让文本换行，当数据被提交处理时换行符也将被一起提交处理。
  
- 例2代码：````<TEXTAREA name="example2" cols="20" rows="2" wrap="PHYSICAL"></TEXTAREA>````
+  例2代码：````<TEXTAREA name="example2" cols="20" rows="2" wrap="PHYSICAL"></TEXTAREA>````
   
- 3.**密码框**是一种特殊的文本域，用于输入密码。当访问者输入文字时，文字会被星号或其它符号代替，而输入的文字会被隐藏。
+  3.**密码框**是一种特殊的文本域，用于输入密码。当访问者输入文字时，文字会被星号或其它符号代替，而输入的文字会被隐藏。
  
- 代码格式：````<input type="password" name="..." size="..." maxlength="...">````
+  代码格式：````<input type="password" name="..." size="..." maxlength="...">````
  
- 属性解释：
+  属性解释：
  
- ````type="password"````定义密码框；name属性定义密码框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
+  ````type="password"````定义密码框；name属性定义密码框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
  
- size属性定义密码框的宽度，单位是单个字符宽度；maxlength属性定义最多输入的字符数。
+  size属性定义密码框的宽度，单位是单个字符宽度；maxlength属性定义最多输入的字符数。
  
- 例3代码：````<input type="password" name="example3" size="20" maxlength="15">````
+  例3代码：````<input type="password" name="example3" size="20" maxlength="15">````
 
- 4.**隐藏域**是用来收集或发送信息的不可见元素，对于网页的访问者来说，隐藏域是看不见的。当表单被提交时，隐藏域就会将信息用你设置时定义的名称和值发送
+  4.**隐藏域**是用来收集或发送信息的不可见元素，对于网页的访问者来说，隐藏域是看不见的。当表单被提交时，隐藏域就会将信息用你设置时定义的名称和值发送
  到服务器上。
  
- 代码格式： ````<input type="hidden" name="..." value="...">````
+  代码格式： ````<input type="hidden" name="..." value="...">````
   
- 属性解释：
+  属性解释：
 
- type="hidden"定义隐藏域；name属性定义隐藏域的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
+  type="hidden"定义隐藏域；name属性定义隐藏域的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
   
- value属性定义隐藏域的值
+  value属性定义隐藏域的值
   
- 例4代码：：````<input type="hidden" name="ExPws" value="dd">````
+  例4代码：：````<input type="hidden" name="ExPws" value="dd">````
   
- 5.**复选框**允许在待选项中选中一项以上的选项。每个复选框都是一个独立的元素，都必须有一个唯一的名称。
+  5.**复选框**允许在待选项中选中一项以上的选项。每个复选框都是一个独立的元素，都必须有一个唯一的名称。
  
- 代码格式：````<INPUT type="checkbox" name="..." value="...">````
+  代码格式：````<INPUT type="checkbox" name="..." value="...">````
 
- 属性解释：
+  属性解释：
   
- ````type="checkbox"````定义复选框；
+  ````type="checkbox"````定义复选框；
   
- name属性定义复选框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；value属性定义复选框的值
+  name属性定义复选框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；value属性定义复选框的值
   
- 例5代码：
+  例5代码：
   
- ````<input type="checkbox" name="yesky" value="09">````
+  ````<input type="checkbox" name="yesky" value="09">````
 
- ````<input type="checkbox" name="Chinabyte" value="08">````
+  ````<input type="checkbox" name="Chinabyte" value="08">````
 
- 6.**单选框**:当需要访问者在待选项中选择唯一的答案时，就需要用到单选框了。
+  6.**单选框**:当需要访问者在待选项中选择唯一的答案时，就需要用到单选框了。
 
- 代码格式：````<input type="radio" name="..." value="...">````
+  代码格式：````<input type="radio" name="..." value="...">````
   
- 属性解释：
+  属性解释：
   
- ````type="radio"````定义单选框；
+  ````type="radio"````定义单选框；
   
- name属性定义单选框的名称，要保证数据的准确采集，单选框都是以组为单位使用的，在同一组中的单选项都必须用同一个名称；
+  name属性定义单选框的名称，要保证数据的准确采集，单选框都是以组为单位使用的，在同一组中的单选项都必须用同一个名称；
   
- value属性定义单选框的值，在同一组中，它们的域值必须是不同的。
+  value属性定义单选框的值，在同一组中，它们的域值必须是不同的。
   
- 例6代码：
+  例6代码：
   
- ````<input type="radio" name="myFavor" value="1">````
+  ````<input type="radio" name="myFavor" value="1">````
   
- ````<input type="radio" name="myFavor" value="2">````
+  ````<input type="radio" name="myFavor" value="2">````
 
- 7.**文件上传框**
+  7.**文件上传框**
 
   定义：有时候，需要用户上传自己的文件，文件上传框看上去和其它文本域差不多，只是它还包含了一个浏览按钮。访问者可以通过输入需要上传的文件的路径或者点击浏览按钮选择需要上传的文件。
    
   注意：在使用文件域以前，请先确定你的服务器是否允许匿名上传文件。表单标签中必须设置ENCTYPE="multipart/form-data"来确保文件被正确编码；另外，表单的传送方式必须设置成POST。
   
- 代码格式：````<input type="file" name="..." size="15" maxlength="100">````
+  代码格式：````<input type="file" name="..." size="15" maxlength="100">````
   
- 属性解释：
+  属性解释：
   
- type="file"定义文件上传框；
+  type="file"定义文件上传框；
   
- name属性定义文件上传框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
+  name属性定义文件上传框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
   
- size属性定义文件上传框的宽度，单位是单个字符宽度；maxlength属性定义最多输入的字符数。
+  size属性定义文件上传框的宽度，单位是单个字符宽度；maxlength属性定义最多输入的字符数。
   
- 例6代码：
+  例6代码：
  
- ````<input type="file" name="myfile" size="15" maxlength="100">````
+  ````<input type="file" name="myfile" size="15" maxlength="100">````
 
- 8.**下拉选择框**允许你在一个有限的空间设置多种选项。
+  8.**下拉选择框**允许你在一个有限的空间设置多种选项。
 
- 代码格式：
+  代码格式：
 	
- ````<select name="..." size="..." multiple>````
+  ````<select name="..." size="..." multiple>````
+  
+  ````<option value="..." selected>...</option>````
  
- ````<option value="..." selected>...</option>````
+  ````...````     
  
- ````...````     
+  ````</select>````
  
- ````</select>````
- 
- 属性解释：
+  属性解释：
 	
- size属性定义下拉选择框的行数；name属性定义下拉选择框的名称；
+  size属性定义下拉选择框的行数；name属性定义下拉选择框的名称；
 	
- multiple属性表示可以多选，如果不设置本属性，那么只能单选；
+  multiple属性表示可以多选，如果不设置本属性，那么只能单选；
 	
- value属性定义选择项的值；selected属性表示默认已经选择本选项。         
+  value属性定义选择项的值；selected属性表示默认已经选择本选项。         
 	
- 例8代码：
+  例8代码：
 	
- ````<select name="mySel" size="1">````
+  ````<select name="mySel" size="1">````
+	
+  ````<option value="1" selected></option>````
+	
+  ````<option value="d2"></option>````	
+	
+  ````</select>````
+	
+  例8：按Ctrl可以多选
+	
+  例8代码2：
+	
+ ````<select name="mySelt" size="3" multiple>````
 	
  ````<option value="1" selected></option>````
 	
- ````<option value="d2"></option>````	
+ ````<option value="d2"></option>````
+	
+ ````<option value="3"></option>````
 	
  ````</select>````
-	
- 例8：按Ctrl可以多选
-	
- 例8代码2：
-	
-````<select name="mySelt" size="3" multiple>````
-	
-````<option value="1" selected></option>````
-	
-````<option value="d2"></option>````
-	
-````<option value="3"></option>````
-	
-````</select>````
 
 ## 二.post 和 get 方式的区别？	
 
