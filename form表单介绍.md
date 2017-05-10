@@ -247,7 +247,7 @@
 
 　　2.表单的工作机制
   
-   [](http://pic002.cnblogs.com/images/2012/287602/2012080516253421.jpg)
+   [image](http://pic002.cnblogs.com/images/2012/287602/2012080516253421.jpg)
   
    3.
    - 输入信息
