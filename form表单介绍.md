@@ -173,7 +173,7 @@
 	
 ````</select>````
 
- 二、2.post 和 get 方式的区别？	
+二、2.post 和 get 方式的区别？	
 -----------------------------
   - 表单提交中get和post方式的区别有5点 
     
@@ -187,57 +187,57 @@
     
     5.get安全性非常低，post安全性较高。但是post方式执行效率要比get方式差一些。
 
-## 3. 在input里，name 有什么作用？
+## 三. 在input里，name 有什么作用？
 
-    1. 作为可与服务器交互数据的HTML元素的服务器端的标示，比如input、select、textarea、和button等。我们可以在服务器端根据其Name通过Request.Params取得元素提交的值。
+   1.作为可与服务器交互数据的HTML元素的服务器端的标示，比如input、select、textarea、和button等。我们可以在服务器端根据其Name通过Request.Params取得元素提交的值。
     
-    2. HTML元素Input type='radio'分组，我们知道radio button控件在同一个分组类，check操作是mutex的，同一时间只能选中一个radio，这个分组就是根据相同的Name属性来实现的。
+   2.HTML元素Input type='radio'分组，我们知道radio button控件在同一个分组类，check操作是mutex的，同一时间只能选中一个radio，这个分组就是根据相同的Name属性来实现的。
 
-    3. 建立页面中的锚点，我们知道<a href="URL">link</a>是获得一个页面超级链接，如果不用href属性，而改用Name，如：<a name="PageBottom"></a>，我们就获得了一个页面锚点。
+   3.建立页面中的锚点，我们知道<a href="URL">link</a>是获得一个页面超级链接，如果不用href属性，而改用Name，如：<a name="PageBottom"></a>，我们就获得了一个页面锚点。
 
-    4. 作为对象的Identity，如Applet、Object、Embed等元素。比如在Applet对象实例中，我们将使用其Name来引用该对象。
+   4.作为对象的Identity，如Applet、Object、Embed等元素。比如在Applet对象实例中，我们将使用其Name来引用该对象。
 
-    5. 在IMG元素和MAP元素之间关联的时候，如果要定义IMG的热点区域，需要使用其属性usemap，使usemap="#name"(被关联的MAP元素的Name)。
+   5.在IMG元素和MAP元素之间关联的时候，如果要定义IMG的热点区域，需要使用其属性usemap，使usemap="#name"(被关联的MAP元素的Name)。
 
-    6. 某些特定元素的属性，如attribute，meta和param。例如为Object定义参数<PARAM NAME = "appletParameter" VALUE = "value">或Meta中<META NAME = "Author" CONTENT = "Dave Raggett">。
+   6.某些特定元素的属性，如attribute，meta和param。例如为Object定义参数<PARAM NAME = "appletParameter" VALUE = "value">或Meta中<META NAME = "Author" CONTENT = "Dave Raggett">。
     
-## 4.radio 如何 分组?
+## 四.radio 如何 分组?
 
-    name的属性值写成一样即为分组
+   name的属性值写成一样即为分组
     
-    ````<input type="radio" name="a" value="张三" id="a1" />````
+   ````<input type="radio" name="a" value="张三" id="a1" />````
       
-    ````<input type="radio" name="a" value="曾四" id="a2"/>````
+   ````<input type="radio" name="a" value="曾四" id="a2"/>````
     
-## 5.placeholder 属性有什么作用?
+## 五.placeholder 属性有什么作用?
 
-    定义和用法：
+   定义和用法：
 
-    placeholder 属性提供可描述输入字段预期值的提示信息（hint）。该提示会在输入字段为空时显示，并会在字段获得焦点时消失。
+   placeholder 属性提供可描述输入字段预期值的提示信息（hint）。该提示会在输入字段为空时显示，并会在字段获得焦点时消失。
 
-    注释：placeholder 属性适用于以下的 <input> 类型：text, search, url, telephone, email 以及 password。
+   注释：placeholder 属性适用于以下的 <input> 类型：text, search, url, telephone, email 以及 password。
 
-## 6.type="hidden"隐藏域有什么作用? 举例说明
+## 六.type="hidden"隐藏域有什么作用? 举例说明
 
-    hidden隐藏域也是表单元素之一，它的语法和其他表单元素一样：
+   hidden隐藏域也是表单元素之一，它的语法和其他表单元素一样：
 
-    <input type="hidden" name="field＿name" value="value"> 
+   <input type="hidden" name="field＿name" value="value"> 
 
-    那么hidden隐藏域到底有什么作用呢？
+   那么hidden隐藏域到底有什么作用呢？
 
-    hidden隐藏域无外乎下面六点作用：
+   hidden隐藏域无外乎下面六点作用：
 
-    （1）隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器。 
+   （1）隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器。 
     
-    （2）有些时候我们要给用户一信息，让他在提交表单时提交上来以确定用户身份，如sessionkey，等等．当然这些东西也能用cookie实现，但使用隐藏域就简单的多了．而且不会有浏览器不支持，用户禁用cookie的烦恼。 
+   （2）有些时候我们要给用户一信息，让他在提交表单时提交上来以确定用户身份，如sessionkey，等等．当然这些东西也能用cookie实现，但使用隐藏域就简单的多了．而且不会有浏览器不支持，用户禁用cookie的烦恼。 
     
-    （3）有些时候一个form里有多个提交按钮，怎样使程序能够分清楚到底用户是按那一个按钮提交上来的呢？我们就可以写一个隐藏域，然后在每一个按钮处加上onclick="document.form.command.value="xx""然后我们接到数据后先检查command的值就会知道用户是按的那个按钮提交上来的。 
+   （3）有些时候一个form里有多个提交按钮，怎样使程序能够分清楚到底用户是按那一个按钮提交上来的呢？我们就可以写一个隐藏域，然后在每一个按钮处加上onclick="document.form.command.value="xx""然后我们接到数据后先检查command的值就会知道用户是按的那个按钮提交上来的。 
     
-    （4）有时候一个网页中有多个form，我们知道多个form是不能同时提交的，但有时这些form确实相互作用，我们就可以在form中添加隐藏域来使它们联系起来。 
+   （4）有时候一个网页中有多个form，我们知道多个form是不能同时提交的，但有时这些form确实相互作用，我们就可以在form中添加隐藏域来使它们联系起来。 
     
-    （5）javascript不支持全局变量，但有时我们必须用全局变量，我们就可以把值先存在隐藏域里，它的值就不会丢失了。 
+   （5）javascript不支持全局变量，但有时我们必须用全局变量，我们就可以把值先存在隐藏域里，它的值就不会丢失了。 
     
-    （6）还有个例子，比如按一个按钮弹出四个小窗口，当点击其中的一个小窗口时其他三个自动关闭．可是IE不支持小窗口相互调用，所以只有在父窗口写个隐藏域，当小窗口看到那个隐藏域的值是close时就自己关掉
+   （6）还有个例子，比如按一个按钮弹出四个小窗口，当点击其中的一个小窗口时其他三个自动关闭．可是IE不支持小窗口相互调用，所以只有在父窗口写个隐藏域，当小窗口看到那个隐藏域的值是close时就自己关掉。
 
 
     
