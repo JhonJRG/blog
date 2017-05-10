@@ -3,6 +3,7 @@
   这里介绍一下form表单的相关特性
 
 ## 1.form表单有什么作用？有哪些常用的input 标签，分别有什么作用？
+
  - 表单在网页中主要负责数据采集功能。
  
  - 一个表单有三个基本组成部分：
@@ -64,70 +65,179 @@
  4. **隐藏域**是用来收集或发送信息的不可见元素，对于网页的访问者来说，隐藏域是看不见的。当表单被提交时，隐藏域就会将信息用你设置时定义的名称和值发送
  到服务器上。
  
-	代码格式： ````<input type="hidden" name="..." value="...">````
+ 代码格式： ````<input type="hidden" name="..." value="...">````
   
-	属性解释：
-	type="hidden"定义隐藏域；name属性定义隐藏域的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
+ 属性解释：
+
+ type="hidden"定义隐藏域；name属性定义隐藏域的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
   
-	value属性定义隐藏域的值
+ value属性定义隐藏域的值
   
-	例如：````<input type="hidden" name="ExPws" value="dd">````
+ 例如：````<input type="hidden" name="ExPws" value="dd">````
   
  5. **复选框**允许在待选项中选中一项以上的选项。每个复选框都是一个独立的元素，都必须有一个唯一的名称。
  
-	代码格式：````<INPUT type="checkbox" name="..." value="...">````
+ 代码格式：````<INPUT type="checkbox" name="..." value="...">````
 
-  属性解释：
+ 属性解释：
   
-  ````type="checkbox"````定义复选框；
+ ````type="checkbox"````定义复选框；
   
-	name属性定义复选框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；value属性定义复选框的值
+ name属性定义复选框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；value属性定义复选框的值
   
-	样例4代码：
+ 例4代码：
   
  ````<input type="checkbox" name="yesky" value="09">````
 
-````<input type="checkbox" name="Chinabyte" value="08">````
+ ````<input type="checkbox" name="Chinabyte" value="08">````
 
-6. **单选框**:当需要访问者在待选项中选择唯一的答案时，就需要用到单选框了。
+ 6. **单选框**:当需要访问者在待选项中选择唯一的答案时，就需要用到单选框了。
 
-	代码格式：````<input type="radio" name="..." value="...">````
+ 代码格式：````<input type="radio" name="..." value="...">````
   
-	属性解释：
+ 属性解释：
   
-	````type="radio"````定义单选框；
+ ````type="radio"````定义单选框；
   
-	name属性定义单选框的名称，要保证数据的准确采集，单选框都是以组为单位使用的，在同一组中的单选项都必须用同一个名称；
+ name属性定义单选框的名称，要保证数据的准确采集，单选框都是以组为单位使用的，在同一组中的单选项都必须用同一个名称；
   
-	value属性定义单选框的值，在同一组中，它们的域值必须是不同的。
+ value属性定义单选框的值，在同一组中，它们的域值必须是不同的。
   
-	样例5代码：
+ 例5代码：
   
-	````<input type="radio" name="myFavor" value="1">````
+ ````<input type="radio" name="myFavor" value="1">````
   
-	````<input type="radio" name="myFavor" value="2">````
+ ````<input type="radio" name="myFavor" value="2">````
 
-7. **文件上传框**
+ 7. **文件上传框**
 
-	 定义：有时候，需要用户上传自己的文件，文件上传框看上去和其它文本域差不多，只是它还包含了一个浏览按钮。访问者可以通过输入需要上传的文件的路径或者点击浏览按钮选择需要上传的文件。
+  定义：有时候，需要用户上传自己的文件，文件上传框看上去和其它文本域差不多，只是它还包含了一个浏览按钮。访问者可以通过输入需要上传的文件的路径或者点击浏览按钮选择需要上传的文件。
    
-	注意：在使用文件域以前，请先确定你的服务器是否允许匿名上传文件。表单标签中必须设置ENCTYPE="multipart/form-data"来确保文件被正确编码；另外，表单的传送方式必须设置成POST。
+  注意：在使用文件域以前，请先确定你的服务器是否允许匿名上传文件。表单标签中必须设置ENCTYPE="multipart/form-data"来确保文件被正确编码；另外，表单的传送方式必须设置成POST。
   
-	代码格式：````<input type="file" name="..." size="15" maxlength="100">````
+ 代码格式：````<input type="file" name="..." size="15" maxlength="100">````
   
-	属性解释：
+ 属性解释：
   
-	type="file"定义文件上传框；
+ type="file"定义文件上传框；
   
-	name属性定义文件上传框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
+ name属性定义文件上传框的名称，要保证数据的准确采集，必须定义一个独一无二的名称；
   
-	size属性定义文件上传框的宽度，单位是单个字符宽度；
+ size属性定义文件上传框的宽度，单位是单个字符宽度；
   
-	maxlength属性定义最多输入的字符数。
+ maxlength属性定义最多输入的字符数。
   
-	样例6代码：
-	````<input type="file" name="myfile" size="15" maxlength="100">````
+ 例6代码：````<input type="file" name="myfile" size="15" maxlength="100">````
+
+7. **下拉选择框**允许你在一个有限的空间设置多种选项。
+
+ 代码格式：
+	
+ ````<select name="..." size="..." multiple>````
+ 
+ ````<option value="..." selected>...</option>````
+ 
+ ````...````     
+ 
+ ````</select>````
+ 
+ 属性解释：
+	
+ size属性定义下拉选择框的行数；name属性定义下拉选择框的名称；
+	
+ multiple属性表示可以多选，如果不设置本属性，那么只能单选；
+	
+ value属性定义选择项的值；selected属性表示默认已经选择本选项。         
+	
+ 例7代码：
+	
+ ````<select name="mySel" size="1">````
+	
+ ````<option value="1" selected></option>````
+	
+ ````<option value="d2"></option>````	
+	
+ ````</select>````
+	
+ 例8：按Ctrl可以多选
+	
+ 例8代码：
+	
+````<select name="mySelt" size="3" multiple>````
+	
+````<option value="1" selected></option>````
+	
+````<option value="d2"></option>````
+	
+````<option value="3"></option>````
+	
+````</select>````
+
+## 2.post 和 get 方式的区别？	
+
+  - 表单提交中get和post方式的区别有5点 
+    
+    1.本质上讲get是从服务器上获取数据，post是向服务器传送数据。 
+    
+    2.get是把参数数据队列加到提交表单的action属性所指的URL中，如：http://www.xxx.com?sessonid=db23434&name=hongten&age=20。在URl中，值和表单各个字段一一对应，并且这些在URL中对用户来说是可见的，即用户是可以看到的。如：name=hongten。post是通过HTTP post机制，将表单内各个字段与其内容放置在HTML HEADER内一起传送到action属性所指的URL地址，对于用户来说，这是透明的。
+    
+    3.对于get方式，服务器端用Request.QueryString获取变量的值，对于post方式，服务器端用Request.Form获取提交的数据。 
+    
+    4.get传送的数据量较小，post传送的数据量较大，一般被默认为不受限制，起限制作用的是服务器的处理程序的处理能力。 
+    
+    5.get安全性非常低，post安全性较高。但是post方式执行效率要比get方式差一些。
+
+## 3. 在input里，name 有什么作用？
+
+    1. 作为可与服务器交互数据的HTML元素的服务器端的标示，比如input、select、textarea、和button等。我们可以在服务器端根据其Name通过Request.Params取得元素提交的值。
+    
+    2. HTML元素Input type='radio'分组，我们知道radio button控件在同一个分组类，check操作是mutex的，同一时间只能选中一个radio，这个分组就是根据相同的Name属性来实现的。
+
+    3. 建立页面中的锚点，我们知道<a href="URL">link</a>是获得一个页面超级链接，如果不用href属性，而改用Name，如：<a name="PageBottom"></a>，我们就获得了一个页面锚点。
+
+    4. 作为对象的Identity，如Applet、Object、Embed等元素。比如在Applet对象实例中，我们将使用其Name来引用该对象。
+
+    5. 在IMG元素和MAP元素之间关联的时候，如果要定义IMG的热点区域，需要使用其属性usemap，使usemap="#name"(被关联的MAP元素的Name)。
+
+    6. 某些特定元素的属性，如attribute，meta和param。例如为Object定义参数<PARAM NAME = "appletParameter" VALUE = "value">或Meta中<META NAME = "Author" CONTENT = "Dave Raggett">。
+    
+## 4.radio 如何 分组?
+
+    name的属性值写成一样即为分组
+    
+    ````<input type="radio" name="a" value="张三" id="a1" />````
+      
+    ````<input type="radio" name="a" value="曾四" id="a2"/>````
+    
+## 5.placeholder 属性有什么作用?
+
+    定义和用法：
+
+    placeholder 属性提供可描述输入字段预期值的提示信息（hint）。该提示会在输入字段为空时显示，并会在字段获得焦点时消失。
+
+    注释：placeholder 属性适用于以下的 <input> 类型：text, search, url, telephone, email 以及 password。
+
+## 6.type="hidden"隐藏域有什么作用? 举例说明
+
+    hidden隐藏域也是表单元素之一，它的语法和其他表单元素一样：
+
+    <input type="hidden" name="field＿name" value="value"> 
+
+    那么hidden隐藏域到底有什么作用呢？
+
+    hidden隐藏域无外乎下面六点作用：
+
+    （1）隐藏域在页面中对于用户是不可见的，在表单中插入隐藏域的目的在于收集或发送信息，以利于被处理表单的程序所使用。浏览者单击发送按钮发送表单的时候，隐藏域的信息也被一起发送到服务器。 
+    
+    （2）有些时候我们要给用户一信息，让他在提交表单时提交上来以确定用户身份，如sessionkey，等等．当然这些东西也能用cookie实现，但使用隐藏域就简单的多了．而且不会有浏览器不支持，用户禁用cookie的烦恼。 
+    
+    （3）有些时候一个form里有多个提交按钮，怎样使程序能够分清楚到底用户是按那一个按钮提交上来的呢？我们就可以写一个隐藏域，然后在每一个按钮处加上onclick="document.form.command.value="xx""然后我们接到数据后先检查command的值就会知道用户是按的那个按钮提交上来的。 
+    
+    （4）有时候一个网页中有多个form，我们知道多个form是不能同时提交的，但有时这些form确实相互作用，我们就可以在form中添加隐藏域来使它们联系起来。 
+    
+    （5）javascript不支持全局变量，但有时我们必须用全局变量，我们就可以把值先存在隐藏域里，它的值就不会丢失了。 
+    
+    （6）还有个例子，比如按一个按钮弹出四个小窗口，当点击其中的一个小窗口时其他三个自动关闭．可是IE不支持小窗口相互调用，所以只有在父窗口写个隐藏域，当小窗口看到那个隐藏域的值是close时就自己关掉
 
 
-
-
+    
