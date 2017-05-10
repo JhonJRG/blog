@@ -8,11 +8,11 @@
  
 - 一个表单有三个基本组成部分：
  
- **表单标签**：这里面包含了处理表单数据所用CGI程序的URL以及数据提交到服务器的方法。
+  **表单标签**：这里面包含了处理表单数据所用CGI程序的URL以及数据提交到服务器的方法。
    
- **表单域**：包含了文本框、密码框、隐藏域、多行文本框、复选框、单选框、下拉选择框和文件上传框等。
+  **表单域**：包含了文本框、密码框、隐藏域、多行文本框、复选框、单选框、下拉选择框和文件上传框等。
    
- **表单按钮**：包括提交按钮、复位按钮和一般按钮；用于将数据传送到服务器上的CGI脚本或者取消输入，还可以用表单按钮来控制其他定义了处理脚本的处理工作
+  **表单按钮**：包括提交按钮、复位按钮和一般按钮；用于将数据传送到服务器上的CGI脚本或者取消输入，还可以用表单按钮来控制其他定义了处理脚本的处理工作
 
 - 常用的input标签有哪些？
  
@@ -151,27 +151,27 @@
 	
   例8代码：
 	
-  ````<select name="mySel" size="1">````
+  > <select name="mySel" size="1">
 	
-  ````<option value="1" selected></option>````
+  > <option value="1" selected></option>
 	
-  ````<option value="d2"></option>````	
+  > <option value="d2"></option>
 	
-  ````</select>````
+  > </select>
 	
   例8：按Ctrl可以多选
 	
   例8代码2：
 	
- ````<select name="mySelt" size="3" multiple>````
+   ````<select name="mySelt" size="3" multiple>````
 	
- ````<option value="1" selected></option>````
+   ````<option value="1" selected></option>````
 	
- ````<option value="d2"></option>````
+   ````<option value="d2"></option>````
 	
- ````<option value="3"></option>````
+   ````<option value="3"></option>````
 	
- ````</select>````
+   ````</select>````
 
 ## 二.post 和 get 方式的区别？	
 
