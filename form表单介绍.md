@@ -250,7 +250,8 @@
 　　2.表单的工作机制
   
    ![image](http://pic002.cnblogs.com/images/2012/287602/2012080516253421.jpg)
-   ![表单提交的几种方式](http://suo.iteye.com/blog/493998)
+   
+   4.![表单提交的几种方式](http://suo.iteye.com/blog/493998)
   
    3.表单的常用信息
 
