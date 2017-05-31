@@ -264,4 +264,4 @@
 
  ````<table>、<tbody>、<tr>、<th>````和````<td>````
   
-![image](https://github.com/JhonJRG/blog/blob/master/img/HTML%E6%A0%87%E7%AD%BE%E4%B8%80%E8%A7%88.png)
+![image](https://jhonjrg.github.io/blog/HTML标签一览.png)
