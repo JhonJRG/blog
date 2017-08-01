@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title>加载更多</title>
+	<!--
+		ajax应用情形：加载更多 懒加载 分页
+
+		如何实现加载更多？
+		情形概述：点击一次，就向后台要5条数据，并且下标递进，是功能上的循环
+		功能描述：当点击一个按钮的时候，向后台要了一组数据，要完数据拼接html，拼接好之后展示到页面上
+		对应的js就是这个意思：给这个按钮绑定事件，当点击这个按钮的时候，发送一个ajax请求，这个请求里面对应一些参数去要数据，数据到来之后应该是一个数组，把这个数组拿过来，
+		数组里面有对应的内容，再去拼装成html用for循环遍历这个数组，再拼装成html字符串，得到一个html片段，然后把它放到页面的一个div上
+
+	-->
+<style>
+ ul,li{
+	margin: 0;
+	padding: 0
+	}
+	#ct li{
+	list-style:none;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-top: 10px;
+	cursor:pointer;
+	}
+
+	#ct li:hover{
+	background: green;
+	}
+	#load-more{
+	display: block;
+	margin: 10px auto;
+	text-align: center;
+	cursor: pointer;
+	}
+	#load-more img{
+	width: 40px;
+	height: 40px;
+	}
+	.btn{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	width: 80px;
+	border: 1px solid #E27272;
+	border-radius: 3px;
+	text-align: center;
+	text-decoration: none;
+	color: #E27272;
+	}
+	.hover{
+	background: green;
+	color: #fff;
+	}
+</style>
+</head>
+
+<body>
+  <ul id="ct"></ul>
+	<!--a链接中的 # 表示哈希，默认点击会跳转到别的地方，可以这样处理 href="javascript:void(0)" 相当于执行一个空语句undefined-->
+  <a id="load-more" class="btn" href="#">加载更多</a>
+
+<script>
+	var btn = document.querySelector('#load-more')
+	var ct = document.querySelector('#ct')
+	var pageIndex = 0
+	//  状态锁：延时响应点击忽略
+	isDataArrive = true
+
+	// 给按钮点击绑定一个事件
+	btn.addEventListener('click',function(e){
+		// 第二种方法取消a链接的自动跳转
+		e.preventDefault()
+
+
+		// 如果数据没有到来那这次点击是被忽略的，把它的状态标记为false；反之，则执行renderPage()
+		if(!isDataArrive){
+			ruturn;
+		}
+		// loadData(renderPage)
+		loadData(function(news){
+			renderPage(news)
+			pageIndex = pageIndex + 5			
+			isDataArrive = true
+		})
+		isDataArrive = false
+	}
+
+	)
+
+// _______________________________________________________________________________
+
+
+	 // 加载数据 直接调用封装好的ajax
+    function loadData(callback){
+	     ajax({
+	     	    type: 'get',
+	     	    url: '/loadMore',
+	     	    data: {
+		   	 	  index: pageIndex,
+		   	 	  length: 5
+		   	    },
+		   	    onSuccess: callback,
+		   	    onError: function(){
+		   	 	  console.log('error')
+	   	        }
+	   	      }
+	   	  )
+
+     }
+
+// _______________________________________________________________________________     
+
+  // 将数据放到节点上
+    function renderPage(news){
+		// 创建节点拼接字符串
+		var fragment = document.createDocumentFragment()
+		for(var i = 0; i<news.length; i++){
+			var node = document.createElement('li')
+			// 注意这里：i是下标 results[i]才是内容
+			// innerText比innerHTML安全，HTML标签会导致恶意文件。innerText文本则相对安全不容易做手脚
+			node.innerText = news[i]
+			console.log(i+'++++++++++++++++++++++++')	
+			fragment.appendChild(node)
+		}
+		ct.appendChild(fragment)
+    }
+	   
+     function ajax(options){
+	   	var xhr = new XMLHttpRequest()
+	  	xhr.onreadystatechange = function(){
+	  		if(xhr.readyState === 4){
+
+				if(xhr.status === 200 || xhr.status === 304){
+					// 和后端约定好了是JSON格式数据  JSON.parse返回一个字符串
+		  			var results = JSON.parse(xhr.responseText)
+					// 先打印一下results对不对
+		  			console.log(results)
+		  			options.onSuccess(results)
+
+					}else{
+						console.log('出错了')
+						options.onError()
+				}
+	  		}
+	  	}
+
+	  	var query = '?'
+	  	for(key in options.data){
+	  		query += key + '=' + options.data[key] + '&'
+	  	}
+	  	// 把最后一个截断
+	  	query = query.substr(0,query.length-1)
+	  	var url = options.url + query
+	  	// console.log(url+'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
+	    xhr.open(options.type,url,true)
+	    xhr.send()     	
+    }
+
+ </script>
+</body>
+</html>
