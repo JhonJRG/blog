@@ -7,8 +7,8 @@ router.get('/loadMore',function(req,res){
   for (var i=0; i<len; i++){
     data.push('内容'+ (parseInt(curIdx) + i))
   }
-  setTimeout(function(){
+//  setTimeout(function(){
    res.send(data);
-  },1000)
+//  },1000)
 
 })
