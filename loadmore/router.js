@@ -7,8 +7,9 @@ router.get('/loadMore',function(req,res){
   for (var i=0; i<len; i++){
     data.push('内容'+ (parseInt(curIdx) + i))
   }
+//   延时加载代码
 //  setTimeout(function(){
-   res.send(data);
+//   res.send(data);
 //  },1000)
-
+   res.send(data);
 })
