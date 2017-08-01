@@ -1,5 +1,4 @@
 
-//甚至可以通过file协议访问，执行程序
 //可以在URL框中输入：http://localhost:8080/getNews?callback=appendHtml
 
 router.get('/getNews',function(req,res){
