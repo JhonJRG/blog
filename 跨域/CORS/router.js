@@ -1,3 +1,5 @@
+// 访问提示：http://b.jrg.com:8080/demo2.html 
+
 router.get('/getNews',function(req,res){
   var news = [
     "1.这是第1行",
@@ -16,7 +18,7 @@ router.get('/getNews',function(req,res){
     news.splice(index,1);
   }
   res.header("Access-Control-Allow-Origin","http://a.jrg.com:8080");
-  // res.header("Access-Control-Allow-Origin","*");
+  //任何人的数据我都给过: res.header("Access-Control-Allow-Origin","*");
   res.send(data);
 
 })
